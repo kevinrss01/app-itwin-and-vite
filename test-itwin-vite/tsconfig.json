@@ -1,0 +1,33 @@
+{
+  "compilerOptions": {
+    "target": "es2020",
+    "lib": ["dom", "dom.iterable", "esnext", "WebWorker"],
+    "allowJs": true,
+    "skipLibCheck": true,
+    "esModuleInterop": true,
+    "allowSyntheticDefaultImports": true,
+    "strict": true,
+    "forceConsistentCasingInFileNames": true,
+    "module": "esnext",
+    "moduleResolution": "node",
+    "resolveJsonModule": true,
+    "isolatedModules": true,
+    "noEmit": true,
+    "jsx": "react-jsx",
+    "noFallthroughCasesInSwitch": true,
+    "paths": {
+      "@itwin/core-bentley/lib/cjs/Tracing": [
+        "./node_modules/@itwin/core-bentley/lib/cjs/Tracing.d.ts"
+      ],
+
+      "@itwin/core-react/node_modules/@itwin/itwinui-react/cjs/types/react-table-config": [
+        "./node_modules/@itwin/itwinui-react/cjs/types/react-table-config.d.ts"
+      ],
+
+      "inspire-tree/inspire-tree": [
+        "./node_modules/inspire-tree/inspire-tree.d.ts"
+      ]
+    }
+  },
+  "include": ["src/**/*.ts", "src/**/*.tsx"]
+}
