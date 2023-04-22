@@ -4,6 +4,10 @@ import tsconfigPaths from "vite-tsconfig-paths";
 import { join } from "path";
 import mkcert from "vite-plugin-mkcert";
 import { setDefaultResultOrder } from "dns";
+import { StringReplacePlugin } from "./string-replace-plugin";
+
+// vite.config.js
+require("ts-node").register();
 
 setDefaultResultOrder("verbatim");
 
@@ -14,6 +18,7 @@ export default defineConfig({
     mkcert({
       hosts: ["localhost"],
     }),
+    new StringReplacePlugin(),
   ],
   define: {
     "process.env": process.env,
